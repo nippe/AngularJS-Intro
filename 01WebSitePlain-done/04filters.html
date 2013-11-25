@@ -4,7 +4,7 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
 
     <script src="Scripts/angular.js"></script>
-    <title>Demo 1</title>
+    <title>Affecto Angular Intro - Filters</title>
 </head>
 <body>
     <div id="container" class="container">
@@ -26,7 +26,7 @@
             <br />
             <ul>
                 <li ng-repeat="person in names | filter:filterName">
-                    {{ person.name | uppercase }} - <span class="btn label-{{ person.label }}">{{ person.city }}</span>
+                    {{ person.name | uppercase }} - <span class="btn label-{{ person.label }}">{{ person.city }}</span> {{ '2013-12-12' | date }}
                 </li>
             </ul>
         </div>
