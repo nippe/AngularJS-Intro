@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app>
+<head>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <script src="Scripts/angular.js"></script>
+    <title>Demo 1</title>
+</head>
+<body>
+    <div id="container" class="container">
+        <h1>Foreach Demo</h1>
+
+
+        <div id="datacontainer" ng-init="names=[{name: 'Jonas'}, {name: 'Daniel'}, {name: 'Gustav'}, {name: 'Louise'}, {name: 'Anders'}, {name: 'Niklas'}]">
+           
+        </div>
+
+        <br />
+
+        <div id="datacontainer" ng-init="names=[{name: 'Jonas', city: 'Göteborg', label: 'warning'}, {name: 'Daniel', city: 'Göteborg'}, {name: 'Gustav', city: 'Malmö'}, {name: 'Louise', city: 'Göteborg'}, {name: 'Anders', city: 'Göteborg', label: 'danger'}, {name: 'Niklas', city: 'Stockholm', label: 'success'}]">
+            Namn att filtrera på:
+            <input type="text" ng-model="filterName" />
+            <br />
+            <br />
+            <ul>
+               
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+<!--<ul>
+    <li ng-repeat="person in names | orderBy:'name'">{{ person.name | uppercase }}</li>
+</ul>-->
+
+
+<!--<li ng-repeat="person in names | filter: filterName">
+    {{ person.name  }} - <span class="btn label-{{ person.label }}">{{ person.city }}</span>
+</li>-->
+
+
+
