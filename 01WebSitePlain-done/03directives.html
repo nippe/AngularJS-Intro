@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app>
+<head>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <script src="Scripts/angular.js"></script>
+    <title>Demo 1</title>
+</head>
+<body>
+    <div id="container" class="container">
+        <h1>Foreach Demo</h1>
+
+
+        <div id="datacontainer" ng-init="names=['Jonas', 'Daniel', 'Gustav', 'Louise', 'Anders', 'Niklas']">
+            <ul>
+                <li ng-repeat="name in names">{{name}}</li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+</html>
