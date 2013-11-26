@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html ng-app xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/angular.js"></script>
+    
+    <title>Affecto Angular Intro - $scope</title>
+</head>
+<body>
+
+    <div class="container" ng-controller="PersonController">
+        <h3>Simple controller using scope</h3>
+        <br />
+        <ul>
+            <li ng-repeat="person in persons">
+                {{ person.name }}
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+    <script>
+        function PersonController($scope) {
+
+            $scope.persons = [
+                { name: 'Jonas', city: 'Göteborg', label: 'warning' },
+                { name: 'Daniel', city: 'Göteborg' },
+                { name: 'Gustav', city: 'Malmö' },
+                { name: 'Louise', city: 'Göteborg' },
+                { name: 'Anders', city: 'Göteborg', label: 'danger' },
+                { name: 'Niklas', city: 'Stockholm', label: 'success' }
+            ];
+        }
+    </script>
+
+</body>
+</html>
