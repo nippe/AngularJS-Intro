@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="demoApp">
+<head>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap-theme.css" rel="stylesheet" />
+    <title>Angular Intro End-to-end Demo</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Angular Multiple Controllers</h1>
+
+        <div class="row">
+            <div ng-controller="CustomerCreateCtrl">
+                <div class="col-lg-6">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="inputName">Namn:</label>
+                            <input class="form-control" type="text" name="inputName" value=" " placeholder="In med namnet!" ng-model="name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="inputName">Kundens Id:</label>
+                            <input class="form-control" type="number" name="inputId" value=" " placeholder="Ett numeriskt id tack (t ex 2, 2343, 23545)" ng-model="customerId" />
+                        </div>
+                        <div class="form-group">
+                            <label for="inputName">Gatuadress:</label>
+                            <input class="form-control" type="text" name="inputAddress" value=" " placeholder="Någontingvägen 12" ng-model="address" />
+                        </div>
+                        <button class="btn btn-lg" ng-click="createNewCustomer()">Spara</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div ng-controller="CustomerListCtrl">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <td>Namn</td>
+                                <td>Id</td>
+                                <td>Adress</td>
+                            </tr>
+                        </thead>
+                        <tr ng-repeat="customer in customerList">
+                            <td>{{ customer.Name }}</td>
+                            <td>{{ customer.CustomerId }}</td>
+                            <td>{{ customer.StreetAddress }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="../js/angular.js"></script>
+    <script src="../js/controllers/CustomerController04.js"></script>
+</body>
+</html>
