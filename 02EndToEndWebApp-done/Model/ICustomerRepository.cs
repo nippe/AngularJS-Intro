@@ -15,5 +15,7 @@ namespace _02EndToEndWebApp_done.Model
         void UpdateCustomer(Customer cust);
 
         void AddCustomer(Customer cust);
+
+        int GetCustomerCount();
     }
 }

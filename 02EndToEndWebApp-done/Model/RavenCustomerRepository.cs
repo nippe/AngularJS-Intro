@@ -21,15 +21,13 @@ namespace _02EndToEndWebApp_done.Model
 
                 using (IDocumentSession session = documentStore.OpenSession(STORE_NAME))
                 {
-                    var queryResult = from buildbox in Queryable.Distinct<Customer>(session.Query<Customer>())
+                    var queryResult = from buildbox in session.Query<Customer>()
                                       select buildbox;
 
                     list = queryResult.ToList<Customer>();
                 }
             }
             return list;
-
-           // return new List<Customer> { new Customer(){Name = "Ttestan", CustomerId = 1234, StreetAddress = "Wallingatan" }};
         }
 
         public Customer GetCustomer(int customerId)
@@ -62,7 +60,35 @@ namespace _02EndToEndWebApp_done.Model
 
         public void AddCustomer(Customer cust)
         {
+            using (var documentStore = new DocumentStore() { Url = STORE_URL })
+            {
+                documentStore.Initialize();
 
+                using (IDocumentSession session = documentStore.OpenSession(STORE_NAME))
+                {
+                    session.Store(cust);
+                    session.SaveChanges();
+                }
+            }
+        }
+
+
+
+
+        public int GetCustomerCount()
+        {
+            int count = 0;
+            using (var documentStore = new DocumentStore() { Url = STORE_URL })
+            {
+                documentStore.Initialize();
+                using (IDocumentSession session = documentStore.OpenSession(STORE_NAME))
+                {
+                    RavenQueryStatistics stats = new RavenQueryStatistics();
+                    session.Query<Customer>().Statistics(out stats).ToArray();
+                    count = stats.TotalResults;
+                }
+            }
+            return count;
         }
     }
 }

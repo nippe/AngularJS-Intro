@@ -10,9 +10,9 @@
         <h1>Angular Multiple Controllers</h1>
 
         <div class="row">
-            <div ng-controller="CustomerCreateCtrl">
+            <div >
                 <div class="col-lg-6">
-                    <form role="form">
+                    <form role="form" ng-controller="CustomerCreateCtrl">
                         <div class="form-group">
                             <label for="inputName">Namn:</label>
                             <input class="form-control" type="text" name="inputName" value=" " placeholder="In med namnet!" ng-model="name" />
@@ -27,8 +27,19 @@
                         </div>
                         <button class="btn btn-lg btn-primary" ng-click="createNewCustomer()">Spara</button>
                     </form>
+                    <br />
+                    <br />
+                    <br />
+                    <div class="center-block" ng-controller="CustomerCountCtrl">
+                        <div class="label-success btn" style="align-content: center; text-align: center; margin-left: 100px; margin-right: 100px;">
+                            <span class="h2">Antal kunder i systemet</span> 
+                            <br />
+                            <span class="h1">{{ numberOfCustomers }}</span>
+                        </div>
+                    </div>
                 </div>
             </div>
+
 
             <div class="col-lg-6">
                 <div ng-controller="CustomerListCtrl">
@@ -54,6 +65,6 @@
         
     </div>
     <script src="../js/angular.js"></script>
-    <script src="../js/controllers/CustomerController04-done.js"></script>
+    <script src="../js/controllers/CustomerController05-done.js"></script>
 </body>
 </html>

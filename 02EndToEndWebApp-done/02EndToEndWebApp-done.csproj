@@ -74,7 +74,13 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="js\angular.js" />
     <Content Include="js\bootstrap.js" />
+    <Content Include="js\controllers\CustomerController01-done.js" />
+    <Content Include="js\controllers\CustomerController02-done.js" />
+    <Content Include="js\controllers\CustomerController03-done.js" />
     <Content Include="js\controllers\CustomerController03.js" />
+    <Content Include="js\controllers\CustomerController04-done.js" />
+    <Content Include="js\controllers\CustomerController05-done.js" />
+    <Content Include="js\controllers\CustomerController05.js" />
     <Content Include="js\controllers\CustomerController04.js" />
     <Content Include="js\controllers\CustomerController02.js" />
     <Content Include="js\controllers\CustomerController01.js" />
@@ -87,6 +93,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="views\01_ScopeDemo.html" />
+    <Content Include="views\02_DependincyInjectionDemo.html" />
+    <Content Include="views\03_HttpGetDemo.html" />
+    <Content Include="views\04_ModuleDemo.html" />
+    <Content Include="views\05_ModuleWithServiceDemo.html" />
+    <Content Include="views\05_ModuleWithServiceDemo-done.html" />
     <Content Include="views\04_ModuleDemo-done.html" />
     <Content Include="views\03_HttpGetDemo-done.html" />
     <Content Include="views\02_DependincyInjectionDemo-done.html" />

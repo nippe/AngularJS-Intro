@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" ng-app="demoApp">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app>
 <head>
     <link href="../css/bootstrap.css" rel="stylesheet" />
     <link href="../css/bootstrap-theme.css" rel="stylesheet" />
@@ -10,28 +10,28 @@
         <h1>Angular Multiple Controllers</h1>
 
         <div class="row">
-            <div ng-controller="CustomerCreateCtrl">
+            <div >  <!--ng-controller="CustomerCreateCtrl"-->
                 <div class="col-lg-6">
                     <form role="form">
                         <div class="form-group">
                             <label for="inputName">Namn:</label>
-                            <input class="form-control" type="text" name="inputName" value=" " placeholder="In med namnet!" ng-model="name" />
+                            <input class="form-control" type="text" placeholder="In med namnet!" /> <!--name-->
                         </div>
                         <div class="form-group">
                             <label for="inputName">Kundens Id:</label>
-                            <input class="form-control" type="number" name="inputId" value=" " placeholder="Ett numeriskt id tack (t ex 2, 2343, 23545)" ng-model="customerId" />
+                            <input class="form-control" type="number" placeholder="Ett numeriskt id tack (t ex 2, 2343, 23545)"  />  <!--customerId-->
                         </div>
                         <div class="form-group">
                             <label for="inputName">Gatuadress:</label>
-                            <input class="form-control" type="text" name="inputAddress" value=" " placeholder="Någontingvägen 12" ng-model="address" />
+                            <input class="form-control" type="text" placeholder="Någontingvägen 12" /> <!--address-->
                         </div>
-                        <button class="btn btn-lg btn-primary" ng-click="createNewCustomer()">Spara</button>
+                        <button class="btn btn-lg btn-primary">Spara</button>  <!--createNewCustomer()-->
                     </form>
                 </div>
             </div>
 
             <div class="col-lg-6">
-                <div ng-controller="CustomerListCtrl">
+                <div >  <!-- CustomerListCtrl -->
                     Filter: 
                     <input type="text" ng-model="filterCriteria" />
                     <table class="table table-striped">
@@ -54,6 +54,6 @@
         
     </div>
     <script src="../js/angular.js"></script>
-    <script src="../js/controllers/CustomerController04-done.js"></script>
+    <script src="../js/controllers/CustomerController04.js"></script>
 </body>
 </html>
