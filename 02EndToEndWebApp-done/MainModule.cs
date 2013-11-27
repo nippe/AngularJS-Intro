@@ -8,15 +8,10 @@ namespace _02EndToEndWebApp_done
 {
     public class MainModule : NancyModule
     {
-
         public MainModule()
         {
-            Get["test"] = _ => { return "HELO"; };
+            Get["test"] = _ => { return "HELLO"; };
 
         }
-
-
-
-
     }
 }

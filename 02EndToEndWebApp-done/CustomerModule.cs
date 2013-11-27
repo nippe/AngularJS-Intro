@@ -11,10 +11,6 @@ namespace _02EndToEndWebApp_done
     public class CustomerModule : NancyModule
     {
         public CustomerModule(ICustomerRepository customerRepository) : base("/customers") {
-            Get["/test"] = _ => {
-                return HttpStatusCode.OK;
-            };
-
 
             Get["/"] = _ => {
                 var customers = customerRepository.GetCustomers();
