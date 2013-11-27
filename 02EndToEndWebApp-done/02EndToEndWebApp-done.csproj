@@ -70,6 +70,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="js\angular.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\controllers\CustomerController03.js" />
+    <Content Include="js\controllers\CustomerController02.js" />
+    <Content Include="js\controllers\CustomerController01.js" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -79,6 +86,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="views\03_HttpGetDemo-done.html" />
+    <Content Include="views\02_DependincyInjectionDemo-done.html" />
+    <Content Include="views\01_ScopeDemo-done.html" />
+    <Content Include="views\test.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +102,7 @@
     <Compile Include="Model\RavenCustomerRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

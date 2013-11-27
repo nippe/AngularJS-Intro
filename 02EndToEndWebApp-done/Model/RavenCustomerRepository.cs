@@ -34,7 +34,20 @@ namespace _02EndToEndWebApp_done.Model
 
         public Customer GetCustomer(int customerId)
         {
-            throw new NotImplementedException();
+            Customer cust;
+            using (var documentStore = new DocumentStore() { Url = STORE_URL })
+            {
+                documentStore.Initialize();
+                using (IDocumentSession session = documentStore.OpenSession(STORE_NAME))
+                {
+                    var queryResult = from c in Queryable.Distinct<Customer>(session.Query<Customer>())
+                                      where c.CustomerId == customerId
+                                      select c;
+
+                    cust = queryResult.First<Customer>();
+                }
+            }
+            return cust;
         }
 
         public void DeleteCustomer(Customer cust)

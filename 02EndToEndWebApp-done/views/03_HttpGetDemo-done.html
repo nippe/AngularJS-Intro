@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app>
+<head>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap-theme.css" rel="stylesheet" />
+    <title>Angular Intro End-to-end Demo</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Angular Http Get</h1>
+
+        <div ng-controller="CustomerController03">
+           
+            <ul>
+                <li ng-repeat="customer in customerList">{{ customer.Name }}</li>
+            </ul>
+
+        </div>
+    </div>
+    <script src="../js/angular.js"></script>
+    <script src="../js/controllers/CustomerController03.js"></script>
+</body>
+</html>
